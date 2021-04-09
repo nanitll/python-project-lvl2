@@ -3,14 +3,6 @@ import argparse
 import json
 from collections import OrderedDict
 
-parser = argparse.ArgumentParser(description="Generate diff")
-parser.add_argument("first_file", type=str)
-parser.add_argument("second_file", type=str)
-parser.add_argument("-f", "--format", help="set format of output")
-args = parser.parse_args()
-first_file = args.first_file
-second_file = args.second_file
-
 
 def generate_diff(file_path1,file_path2):
     file_1 = (json.load(open(file_path1)))
@@ -35,8 +27,17 @@ def generate_diff(file_path1,file_path2):
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Generate diff")
+    parser.add_argument("first_file", type=str)
+    parser.add_argument("second_file", type=str)
+    parser.add_argument("-f", "--format", help="set format of output")
+    args = parser.parse_args()
+    first_file = args.first_file
+    second_file = args.second_file
+
     print(generate_diff(first_file, second_file))
     return 0
 
 if __name__ == '__main__':
     main()
+    
