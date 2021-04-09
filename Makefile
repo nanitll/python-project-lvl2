@@ -8,3 +8,5 @@ package-install:
 	python3 -m pip install --ignore-installed --user dist/*whl
 gendiff: 
 	poetry run gendiff
+lint:
+	flake8 gendiff
