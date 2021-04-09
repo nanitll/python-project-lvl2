@@ -2,12 +2,13 @@
 import argparse
 import json
 
+def 
 
 def generate_diff(file_path1, file_path2):
-    file_1 = (json.load(open(file_path1)))
-    file_2 = (json.load(open(file_path2)))
+    file_1 = json.load(open(file_path1))
+    file_2 = json.load(open(file_path2))
     diff = []
-    for i in file_1.keys():
+    for i in file_1.keys():ы
         if i not in file_2.keys():
             diff.append(" - {}: {}\n".format(i, file_1[i]))
         elif file_1[i] != file_2[i]:
