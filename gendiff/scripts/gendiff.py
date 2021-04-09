@@ -1,10 +1,9 @@
 #!usr/bin/env python3
 import argparse
 import json
-from collections import OrderedDict
 
 
-def generate_diff(file_path1,file_path2):
+def generate_diff(file_path1, file_path2):
     file_1 = (json.load(open(file_path1)))
     file_2 = (json.load(open(file_path2)))
     diff = []
@@ -16,14 +15,11 @@ def generate_diff(file_path1,file_path2):
             diff.append(" + {}: {}\n".format(i, file_2[i]))
         else:
             diff.append("   {}: {}\n".format(i, file_1[i]))
-    
     for i in file_2.keys():
         if i not in file_1.keys():
             diff.append(" + {}: {}\n".format(i, file_2[i]))
-    
-    diff_str = ''.join(sorted(diff,key=lambda x: x[3]))
+    diff_str = ''.join(sorted(diff, key=lambda x: x[3]))
     return diff_str
-
 
 
 def main():
@@ -37,6 +33,7 @@ def main():
 
     print(generate_diff(first_file, second_file))
     return 0
+
 
 if __name__ == '__main__':
     main()
