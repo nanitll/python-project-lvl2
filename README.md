@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/nanitll/python-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/nanitll/python-project-lvl2/actions)
 <a href="https://codeclimate.com/github/nanitll/python-project-lvl2/maintainability"><img src="https://api.codeclimate.com/v1/badges/6d7a557e97a5f1332ddd/maintainability" /></a>
-![run-tests](https://github.com/afiskon/go-rest-service-example/workflows/run-tests/badge.svg)
+[![Python package](https://github.com/nanitll/python-project-lvl2/actions/workflows/run-tests.yaml/badge.svg)](https://github.com/nanitll/python-project-lvl2/actions/workflows/run-tests.yaml)
 
 <h1>Сравнение плоских файлов (JSON)</h2>
 
