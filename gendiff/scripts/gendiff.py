@@ -2,23 +2,26 @@
 import argparse
 import json
 
-def 
+
+def output_diff(key1, key2, operand=' '):
+    return " {} {}: {}\n".format(operand, key1, key2)
+
 
 def generate_diff(file_path1, file_path2):
     file_1 = json.load(open(file_path1))
     file_2 = json.load(open(file_path2))
     diff = []
-    for i in file_1.keys():ы
+    for i in file_1.keys():
         if i not in file_2.keys():
-            diff.append(" - {}: {}\n".format(i, file_1[i]))
+            diff.append(output_diff(i, file_1[i], '-')) 
         elif file_1[i] != file_2[i]:
-            diff.append(" - {}: {}\n".format(i, file_1[i]))
-            diff.append(" + {}: {}\n".format(i, file_2[i]))
+            diff.append(output_diff(i, file_1[i], '-'))
+            diff.append(output_diff(i, file_2[i], '+'))
         else:
-            diff.append("   {}: {}\n".format(i, file_1[i]))
+            diff.append(output_diff(i, file_1[i], ' '))
     for i in file_2.keys():
         if i not in file_1.keys():
-            diff.append(" + {}: {}\n".format(i, file_2[i]))
+            diff.append(output_diff(i, file_2[i], '+'))
     diff_str = ''.join(sorted(diff, key=lambda x: x[3]))
     return diff_str
 
