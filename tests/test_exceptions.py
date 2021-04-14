@@ -39,6 +39,7 @@ from gendiff.error_constants import VALUE_ERROR, FORMAT_ERROR, NOT_FOUND_ERROR
 )
 def test_exception(before, after, output_format, expected):
     """Test exception.
+
     Args:
         before: before filepath
         after: after filepath

@@ -1,3 +1,4 @@
+"""Formatters package."""
 from gendiff.formatters import json, plain, stylish
 
 mapping_for_choose_formatter = {

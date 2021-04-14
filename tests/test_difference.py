@@ -25,6 +25,7 @@ from tests.fixtures.diff import diff as expected_diff
 )
 def test_difference(before_dict, after_dict, expected_diff):
     """Test difference build function.
+
     Args:
         before_dict: before dict
         after_dict: after dict

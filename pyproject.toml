@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.0"
+version = "0.5.4"
 description = "The Difference Generator"
-authors = ["nanitll <pasha-s98@ya.ru>"]
+authors = ["agmrv <airatgum@gmail.com>"]
 packages = [
-    {include = "gendiff"},
+    { include = "gendiff" },
 ]
 classifiers = [
   "Environment :: Console",
@@ -15,7 +15,7 @@ classifiers = [
 repository = "https://github.com/agmrv/python-project-lvl2"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 PyYAML = "^5.3.1"
 
 [tool.poetry.dev-dependencies]

@@ -1,3 +1,3 @@
-from gendiff.diff_generator import generate_diff
+# -*- coding:utf-8 -*-
 
-__all__ = ["generate_diff"]  # noqa: WPS410
+"""Script of the 'Difference Generator."""

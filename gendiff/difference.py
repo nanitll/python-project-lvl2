@@ -1,14 +1,25 @@
+"""Module of the difference dict builder."""
+
 from collections import OrderedDict
 
-def build(before_dict, after_dict):
 
+def build(before_dict, after_dict):
+    """Build the diff dict between before and after dicts.
+
+    Args:
+        before_dict: dict before change
+        after_dict: dict after change
+
+    Returns:
+        diff dict
+    """
     diff = {}
     before_keys = set(before_dict.keys())
     after_keys = set(after_dict.keys())
-    
+
     for removed_key in before_keys.difference(after_keys):
-        diff[removed_key] = ("removed". before_dict[removed_key])
-        
+        diff[removed_key] = ("removed", before_dict[removed_key])
+
     for added_key in after_keys.difference(before_keys):
         diff[added_key] = ("added", after_dict[added_key])
 

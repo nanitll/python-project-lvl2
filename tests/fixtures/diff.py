@@ -1,3 +1,5 @@
+"""diff for tests."""
+
 from collections import OrderedDict
 
 diff = OrderedDict(
