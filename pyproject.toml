@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.5.4"
+version = "1.0.0"
 description = "The Difference Generator"
-authors = ["agmrv <airatgum@gmail.com>"]
+authors = ["nanit <pasha-s98@ya.ru"]
 packages = [
     { include = "gendiff" },
 ]
