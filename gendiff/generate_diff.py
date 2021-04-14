@@ -1,7 +1,7 @@
 from gendiff.difference import build
 from gendiff.formatters import mapping_for_choose_formatter
 from gendiff.io import read_data
-from gendiff.error_constants import
+from gendiff.error_constants import FORMAT_ERROR
 
 def output_diff(key1, key2, operand=' '):
     return " {} {}: {}\n".format(operand, key1, key2)
