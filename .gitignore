@@ -1,5 +1,10 @@
+*.egg-info
 __pycache__
-.venv
-dist
-__init__.py
-/*.json
+dist/
+*.pyc
+.venv/
+examples/
+test/
+.coverage
+.pytest_cache/
+.vscode/
