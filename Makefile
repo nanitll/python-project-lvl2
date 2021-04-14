@@ -1,14 +1,21 @@
-install: 
-	poetry install
-make build: 
-	poetry build
-publish: 
-	poetry publish --dry-run
-package-install: 
-	python3 -m pip install --ignore-installed --user dist/*whl
-gendiff: 
-	poetry run gendiff
+install:
+	@poetry install
+
 lint:
 	poetry run flake8 gendiff tests
+
 test:
 	poetry run pytest -v --verbose --cov=gendiff tests/
+
+selfcheck:
+	poetry check
+
+check: selfcheck lint test
+
+build: check
+	poetry build
+
+publish: build
+	poetry publish -r test_pypi
+
+.PHONY: install lint test selfcheck check build publish
